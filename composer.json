@@ -1,5 +1,5 @@
 {
-    "name": "mysasspackage/type",
+    "name": "mysaaspackage/type",
     "type": "library",
     "description": "Provides a set of value objects",
     "keywords": [],
