@@ -1,16 +1,16 @@
 {
     "name": "mysasspackage/type",
     "type": "library",
-    "description": "Provides a set of value object abstrations",
+    "description": "Provides a set of value objects",
     "keywords": [],
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "MySaasPackage\\Type\\": "src/"
+            "MySaasPackage\\Support\\": "src/"
         }
     },
     "autoload-dev": {
-        "psr-4": { "MySaasPackage\\Type\\": "tests/" }
+        "psr-4": { "MySaasPackage\\Support\\": "tests/" }
     },
     "authors": [
         {

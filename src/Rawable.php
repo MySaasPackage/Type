@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MySaasPackage\Type\Internal;
+namespace MySaasPackage\Support;
 
 interface Rawable
 {
