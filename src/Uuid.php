@@ -20,7 +20,7 @@ readonly class Uuid implements Stringable, Rawable, JsonSerializable
     {
         $uuid = str_replace(['urn:', 'uuid:', 'URN:', 'UUID:', '{', '}'], '', $raw);
 
-        if (self::NIL !== $uuid && (bool) preg_match(self::REGEX, $uuid)) {
+        if (self::NIL !== $uuid && false === (bool) preg_match(self::REGEX, $uuid)) {
             throw new InvalidArgumentException('The provided value must be a valid uuid');
         }
 
