@@ -12,7 +12,7 @@ readonly class Uuid implements Stringable, Rawable, JsonSerializable
 {
     protected readonly string $raw;
 
-    public const REGEX = '\A[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\z';
+    public const REGEX = '{^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$}Di';
 
     public const NIL = '00000000-0000-0000-0000-000000000000';
 
@@ -20,7 +20,7 @@ readonly class Uuid implements Stringable, Rawable, JsonSerializable
     {
         $uuid = str_replace(['urn:', 'uuid:', 'URN:', 'UUID:', '{', '}'], '', $raw);
 
-        if (self::NIL !== $uuid || false === (bool) preg_match('/'.self::REGEX.'/Dms', $uuid)) {
+        if (self::NIL !== $uuid || false === (bool) preg_match(self::REGEX, $uuid)) {
             throw new InvalidArgumentException('The provided value must be a valid uuid');
         }
 
