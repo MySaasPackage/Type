@@ -7,7 +7,7 @@ namespace MySaasPackage\Support;
 use Stringable;
 use JsonSerializable;
 
-readonly class Id implements Stringable, Integerable, Rawable, JsonSerializable
+readonly class Identity implements Stringable, Integerable, Rawable, JsonSerializable
 {
     public function __construct(
         protected int $raw
