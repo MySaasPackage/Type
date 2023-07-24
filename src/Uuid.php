@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace MySaasPackage\Type;
 
-use InvalidArgumentException;
-use JsonSerializable;
-use MySaasPackage\Type\Internal\Rawable;
 use Stringable;
+use JsonSerializable;
+use InvalidArgumentException;
+use MySaasPackage\Type\Internal\Rawable;
 
 readonly class Uuid implements Stringable, Rawable, JsonSerializable
 {

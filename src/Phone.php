@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace MySaasPackage\Type;
 
-use InvalidArgumentException;
-use JsonSerializable;
-use MySaasPackage\Type\Internal\Rawable;
 use Stringable;
+use JsonSerializable;
+use InvalidArgumentException;
+use MySaasPackage\Type\Internal\Rawable;
 
 readonly class Phone implements Stringable, Rawable, JsonSerializable
 {

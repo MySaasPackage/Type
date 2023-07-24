@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace MySaasPackage\Type;
 
-use JsonSerializable;
-use MySaasPackage\Type\Internal\Integerable;
-use MySaasPackage\Type\Internal\Rawable;
 use Stringable;
+use JsonSerializable;
+use MySaasPackage\Type\Internal\Rawable;
+use MySaasPackage\Type\Internal\Integerable;
 
 readonly class Id implements Stringable, Integerable, Rawable, JsonSerializable
 {

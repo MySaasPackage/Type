@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace MySaasPackage\Type;
 
+use Stringable;
 use JsonSerializable;
 use MySaasPackage\Type\Internal\Rawable;
-use Stringable;
 
 readonly class Hash implements Stringable, Rawable, JsonSerializable
 {
