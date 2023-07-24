@@ -1,7 +1,7 @@
 {
     "name": "mysasspackage/type",
     "type": "library",
-    "description": "",
+    "description": "Provides a set of value object abstrations",
     "keywords": [],
     "license": "MIT",
     "autoload": {
