@@ -7,7 +7,7 @@ namespace MySaasPackage;
 use Stringable;
 use JsonSerializable;
 
-readonly class Hash implements Stringable, Rawable, JsonSerializable
+readonly class PasswordHash implements Stringable, Rawable, JsonSerializable
 {
     public function __construct(
         protected string $raw

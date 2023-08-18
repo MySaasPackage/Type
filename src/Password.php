@@ -14,9 +14,9 @@ readonly class Password implements Stringable, Rawable, JsonSerializable
     ) {
     }
 
-    public function toHash(callable $callable): Hash
+    public function toHash(callable $callable): PasswordHash
     {
-        return new Hash($callable($this->raw));
+        return new PasswordHash($callable($this->raw));
     }
 
     public function jsonSerialize(): string

@@ -7,6 +7,7 @@ namespace MySaasPackage;
 use Stringable;
 use JsonSerializable;
 use InvalidArgumentException;
+use Ramsey\Uuid\Uuid as RamseyUuid;
 
 readonly class Uuid implements Stringable, Rawable, JsonSerializable
 {
@@ -25,6 +26,11 @@ readonly class Uuid implements Stringable, Rawable, JsonSerializable
         }
 
         $this->raw = $uuid;
+    }
+
+    public static function generate(): self
+    {
+        return new self(RamseyUuid::uuid4()->toString());
     }
 
     public function jsonSerialize(): string
